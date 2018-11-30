@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>.:Projeto Agenda:.</title>
-        <link rel="stylesheet" type="text/css" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
@@ -25,7 +25,7 @@
             Menu
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Novo contato</a>
+          <a class="dropdown-item" href="{{url('screens/novo')}}">Novo contato</a>
             <a class="dropdown-item" href="{{ url ('screens/listar') }}">Listar contatos</a>
           </div>
         </ul>
@@ -72,7 +72,7 @@
           <div class="card-body">
             <h5 class="card-title">Adicionar novo contato</h5>
             <p class="card-text">Aqui você adiciona seus contatos</p>
-            <a href="#" class="btn btn-outline-primary" style="float: right;">Vamos lá</a>
+            <a href="{{url ('screens/novo')}}" class="btn btn-outline-primary" style="float: right;">Vamos lá</a>
           </div>
         </div>
       </div>
@@ -147,6 +147,6 @@
     </li>
   </ul>
 
-    <script type="text/javascript" src="js/app.js">></script>
+    <script type="text/javascript" src="{{asset('js/app.js')}}">></script>
 </body>
 </html>

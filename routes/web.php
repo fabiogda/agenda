@@ -16,5 +16,7 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'screens'], function () {
-    Route::get('/listar', 'Rules@listar');
+    Route::get('/listar', 'RulesController@listar');
+    Route::get('/novo', 'RulesController@cadastrar');
+    Route::post('/salvar', 'RulesController@store');
 });
