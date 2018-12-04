@@ -4,10 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pessoa;
+use App\Telefone;
 
 class RulesController extends Controller
 {
  
+    private $tefones_controller;
+
+    public function __construct(TelefonesController $telefones_controller)
+    {
+        $this->tefones_controller = $telefones_controller;
+    }
     public function cadastrar()
     {
         return view ('screens.cadastro');
@@ -29,7 +36,16 @@ class RulesController extends Controller
      */
     public function store(Request $request)
     {
-        Pessoa::create($request->all());
+        $pessoa = Pessoa::create($request->all());
+
+        if ($request->ddd && $request->telefone)
+        {
+            $telefone = new Telefone();
+            $telefone->ddd = $request->ddd;
+            $telefone->fones = $request->telefone;
+            $telefone->pessoas_id = $pessoa->id;
+            $this->tefones_controller->store2($telefone);
+        }
         return redirect('screens/listar')->with('message', 'Cadastro efetuado com sucesso!!');
     }
 

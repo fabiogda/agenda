@@ -24,7 +24,7 @@
             Menu
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Novo contato</a>
+          <a class="dropdown-item" href="{{ url('screens/novo')}}">Novo contato</a>
             <a class="dropdown-item" href="{{ url ('screens/listar') }}">Listar contatos</a>
           </div>
         </ul>

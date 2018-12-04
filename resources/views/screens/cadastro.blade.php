@@ -14,26 +14,25 @@
 
         <div class="form-row">
 
-            <div class="form-group col-md-12">                
+            <div class="col-md-6">                
                 <label><strong>Nome:</strong></label>
                 <input class="form-control" name="nome" placeholder="Nome Completo">
             </div>
 
-            <!-- 
-               <div class="form-group col-md-2">
+               <div class="col-md-2">
                     <label><strong>DDD:</strong></label>
-                    <input type="text" class="form-control" id="ddd" placeholder="DDD">
+                    <input type="text" class="form-control" name="ddd" placeholder="DDD">
                 </div>
 
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label><strong>Telefone:</strong></label>
-                <input type="text" class="form-control" id="telefone" placeholder="33337777">
+                <input type="text" class="form-control" name="telefone" placeholder="11111111">
             </div>
-            -->
-        </div>
+        </div> 
 
-        <button style="float: right;" type="submit" class="btn btn-outline-primary">Enviar</button>
-   
+        
+            <button style="float: right; margin-top: 5px;" type="submit" class="btn btn-outline-primary">Enviar</button>
+
     </form>
 
 </div>
